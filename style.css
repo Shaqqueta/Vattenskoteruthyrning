@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 10%;
+  margin: 1% 2% 0 2%;
+  height: 100px;
+  margin-bottom: -3%;
+  border-radius: 20px;
+}
+.logo {
+  width: 12%;
+  cursor: pointer;
+  margin-right: auto;
+  background-color: transparent;
+}
+.navLinks {
+  list-style: none;
+}
+.navLinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navLinks li a {
+  transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+  color: orange;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgb(255,140,0);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: rgba(255,140,0, 0.8);
+}
+
+#container {
+  margin-top: 5%;
+}
+
+.skoter {
+  width: 100%;
+}
+
+#titel {
+  margin-top: 1.5%;
+  font-size: 45px;
+  text-align: center;
+  font-weight: 300;
+}
+
+#information {
+  text-align: center;
+  margin: 1% 30%;
+  word-spacing: 3px;
+  font-size: 20px;
+}
+
+.GTR{
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 16px 14px 20px #0000008c;
+}
+
+.Up{
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 16px 14px 20px #0000008c;
+}
+
+td{
+    text-align: center;
+}
+td h2{
+    margin-bottom: 2%;
+}
+
+#modeller {
+  display: grid;
+  margin-top: 5%;
+}
+
+
+
+
+
