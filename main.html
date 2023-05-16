@@ -4,71 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link rel="icon" type="image/x-icon" href="bilder/jet-ski.png" />
     <link rel="stylesheet" href="style.css" />
     <title>Vattenskoter</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
   </head>
   <body>
-    <header>
-      <img src="bilder/logga2.png" alt="" class="logo" />
-      <nav>
-        <ul class="navLinks">
-          <li><a href="#">Kontakta Oss</a></li>
-          <li><a href="#">Boka Online</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="loggaIn">
-        <button>Logga In</button>
-      </a>
-    </header>
-    <div id="container">
-      <img src="bilder/skoter.jpg" alt="" class="skoter" />
-      <h1 id="titel">
-        Hyra vattenskotrar <br />
-        i hela Stockholm
-      </h1>
-      <p id="information">
-        Vi hyr ut vattenskotrar från Sea Doo av modellen GTR 215 & Spark 3up.
-        Toppfarten är ca 80-110 km/h beroende på modell och skotrarna har plats
-        för 3 vuxna personer. När du hyr vattenskoter från oss i Stockholm ingår
-        lån av våtdräkt och flytväst. <br />
-        <br />
-        Första gången du hyr vattenskoter kommer vi genomföra en kortare
-        utbildning i hur man manövrerar en vattenskoter till och från brygga. Om
-        du har genomfört förarbevis för vattenskoter hos oss räknas det som
-        utbildning och du hyr till det lägre priset. Kravet på utbildning är för
-        att du inte ska skada vare dig själv eller vattenskotern då du ska till
-        och från en brygga. ​ När du hyr vattenskoter kommer vi skriva ett avtal
-        med den person som ska vara befälhavare och ansvarig för vattenskotern.
-        Befälhavaren har det fulla ansvaret att framföra vattenskotern med gott
-        sjömanskap samt ersätta reparationen av eventuella skador som uppstår på
-        skotern under tiden du hyr vattenskotern. ​<br />
-        <br />
-        Sedan den 1 maj 2022 krävs det att alla som ska köra vattenskoter
-        innehar Förarbevis för vattenskoter. Att hyra ut eller låna ut en
-        vattenskoter till någon som inte har förarbevis för vattenskoter är
-        olagligt.
-      </p>
-      <div id="modeller">
-        <table>
-          <tr>
-            <td>
-              <h2>Sea Doo GTR 215</h2>
-              <img src="bilder/GTR215.jpg" alt="" class="GTR" />
-            </td>
-            <td>
-              <h2>Sea Doo Spark 3-Up</h2>
-              <div class="box">
-                <img src="bilder/Spark3up.jpg" alt="" class="Up" />
-              </div>
-            </td>
-          </tr>
-        </table>
+    <main>
+      <header>
+        <img src="bilder/logga2.png" alt="" class="logo" />
+        <nav>
+          <ul class="navLinks">
+            <li><a href="#footer">Kontakta Oss</a></li>
+            <li><a href="#">Boka Online</a></li>
+            <li>
+              <a href="login.html" class="loggaIn">
+                <button>Logga In</button>
+              </a>
+            </li>
+            <li>
+              <label id="dark-change"></label>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="container">
+        <img src="bilder/skoter.jpg" alt="" class="skoter" />
+        <h1 id="titel">
+          Hyra vattenskotrar <br />
+          i hela Stockholm
+        </h1>
+        <p id="information">
+          Vi hyr ut vattenskotrar från Sea Doo av modellen GTR 215 & Spark 3up.
+          Toppfarten är ca 80-110 km/h beroende på modell och skotrarna har
+          plats för 3 vuxna personer. När du hyr vattenskoter från oss i
+          Stockholm ingår lån av våtdräkt och flytväst. <br />
+          <br />
+          Första gången du hyr vattenskoter kommer vi genomföra en kortare
+          utbildning i hur man manövrerar en vattenskoter till och från brygga.
+          Om du har genomfört förarbevis för vattenskoter hos oss räknas det som
+          utbildning och du hyr till det lägre priset. Kravet på utbildning är
+          för att du inte ska skada vare dig själv eller vattenskotern då du ska
+          till och från en brygga. ​ När du hyr vattenskoter kommer vi skriva
+          ett avtal med den person som ska vara befälhavare och ansvarig för
+          vattenskotern. Befälhavaren har det fulla ansvaret att framföra
+          vattenskotern med gott sjömanskap samt ersätta reparationen av
+          eventuella skador som uppstår på skotern under tiden du hyr
+          vattenskotern. ​<br />
+          <br />
+          Sedan den 1 maj 2022 krävs det att alla som ska köra vattenskoter
+          innehar Förarbevis för vattenskoter. Att hyra ut eller låna ut en
+          vattenskoter till någon som inte har förarbevis för vattenskoter är
+          olagligt.
+        </p>
+        <div id="modeller">
+          <div id="gtr">
+            <h2>Sea Doo GTR 215</h2>
+            <img src="bilder/GTR215.jpg" alt="" class="modell" />
+            <h3>Specifikationer:</h3>
+            <p class="info">
+              Hästkrafter: 215 hk (optimerad till 240) <br />
+              Toppfart: 110 km/h <br />
+              Passagerare: 2 (totalt 3 ink förare) <br />
+              Stabilitet (1-10): 9 <br />
+              Vikt: 360 kg <br />
+              Tank: 60 L <br />
+              <a
+                href="https://www.jetdrift.com/product/sea-doo-spark-3up-90hp-ibr/"
+                target="_blank"
+                >Läs mer</a
+              ><br />
+              <button class="hyr">HYR</button>
+            </p>
+          </div>
+          <div id="up">
+            <h2>Sea Doo 3Up</h2>
+            <img src="bilder/Spark3up.jpg" alt="" class="modell" />
+            <h3>Specifikationer:</h3>
+            <p class="info">
+              Hästkrafter: 90 hk <br />
+              Toppfart: 80 km/h <br />
+              Passagerare: 2 (totalt 3 ink förare) <br />
+              Stabilitet (1-10): 6 <br />
+              Vikt: 190 kg <br />
+              Tank: 30 L <br />
+              <a
+                href="https://www.boatingworld.com/boats/sea-doo-pwcs/2016-sea-doo-215-gtr"
+                target="_blank"
+                >Läs mer</a
+              ><br />
+              <button class="hyr">HYR</button>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <footer id="footer">
+        <div id="map"></div>
+      </footer>
+    </main>
   </body>
+  <script src="script.js"></script>
 </html>
