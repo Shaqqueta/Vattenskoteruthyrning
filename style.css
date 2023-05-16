@@ -5,6 +5,7 @@
   padding: 0;
   background-color: #fff;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 li,
@@ -18,7 +19,6 @@ button {
 
 header {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   padding: 0px 10%;
   margin: 1% 2% 0 2%;
@@ -40,6 +40,37 @@ header {
   padding: 0px 20px;
 }
 
+label {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  right: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  margin-right: 7%;
+  margin-top: -1%;
+}
+
+label::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 24px;
+  left: 1px;
+  top: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #000;
+  transform: 0.4s;
+}
+label.active::before {
+  left: 24px;
+  background: #fff;
+}
+body.night {
+  background: #000;
+}
+
 .navLinks li a {
   transition: all 0.3s ease 0s;
 }
@@ -50,7 +81,7 @@ header {
 
 button {
   padding: 9px 25px;
-  background-color: rgb(255,140,0);
+  background-color: rgb(255, 140, 0);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -59,7 +90,29 @@ button {
 }
 
 button:hover {
-  background-color: rgba(255,140,0, 0.8);
+  background-color: rgba(255, 140, 0, 0.8);
+}
+#toggle {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  right: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  margin-right: 7%;
+  margin-top: -1%;
+}
+#toggle::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 24px;
+  left: 1px;
+  top: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #000;
+  transform: 0.4s;
 }
 
 #container {
@@ -79,36 +132,49 @@ button:hover {
 
 #information {
   text-align: center;
-  margin: 1% 30%;
+  margin: 1% 20%;
   word-spacing: 3px;
   font-size: 20px;
 }
 
-.GTR{
-    width: 85%;
-    border-radius: 10px;
-    box-shadow: 16px 14px 20px #0000008c;
+td {
+  text-align: center;
 }
-
-.Up{
-    width: 85%;
-    border-radius: 10px;
-    box-shadow: 16px 14px 20px #0000008c;
+td h2 {
+  margin-bottom: 2%;
 }
-
-td{
-    text-align: center;
-}
-td h2{
-    margin-bottom: 2%;
+.info {
+  word-spacing: 2px;
 }
 
 #modeller {
-  display: grid;
+  display: flex;
   margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+#gtr {
+  padding: 3%;
+}
+#up {
+  padding: 3%;
+}
+.modell {
+  border-radius: 5px;
+}
+.hyr {
+  margin-top: 1%;
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+}
 
-
-
-
+#map {
+  height: 700px;
+  width: 800px;
+}
